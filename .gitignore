@@ -1,0 +1,5 @@
+.envrc
+tags
+result
+zig-out
+zig-cache
