@@ -27,6 +27,7 @@
             jq
             zigpkgs.master
             alejandra
+            zls
           ];
         };
       }
