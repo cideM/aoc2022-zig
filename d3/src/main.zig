@@ -10,7 +10,7 @@ fn charScore(c: u8) usize {
 }
 
 pub fn main() !void {
-    var buffer: [50000]u8 = undefined;
+    var buffer: [25000]u8 = undefined;
     var fba = std.heap.FixedBufferAllocator.init(&buffer);
     const alloc = fba.allocator();
 
