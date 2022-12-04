@@ -2,14 +2,12 @@ const std = @import("std");
 const io = std.io;
 
 pub fn main() !void {
-    var buffer: [15000]u8 = undefined;
-    var fba = std.heap.FixedBufferAllocator.init(&buffer);
-    const alloc = fba.allocator();
+    var buffer: [50]u8 = undefined;
 
     var score: usize = 0;
     var score2: usize = 0;
     const std_in_reader = io.getStdIn().reader();
-    while (try std_in_reader.readUntilDelimiterOrEofAlloc(alloc, '\n', 10000)) |line| {
+    while (try std_in_reader.readUntilDelimiterOrEof(&buffer, '\n')) |line| {
         var pairs_iter = std.mem.split(u8, line, ",");
         const left = pairs_iter.next().?;
         const right = pairs_iter.next().?;

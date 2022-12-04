@@ -25,14 +25,12 @@ const map_two = std.ComptimeStringMap(u8, .{
 });
 
 pub fn main() void {
-    var buffer: [10000]u8 = undefined;
-    var fba = std.heap.FixedBufferAllocator.init(&buffer);
-    const allocator = fba.allocator();
+    var buffer: [100]u8 = undefined;
     const reader = std.io.getStdIn().reader();
 
     var score_one: usize = 0;
     var score_two: usize = 0;
-    while (reader.readUntilDelimiterOrEofAlloc(allocator, '\n', 1000) catch |err| {
+    while (reader.readUntilDelimiterOrEof(&buffer, '\n') catch |err| {
         std.debug.print("Awww {any}\n", .{err});
         return;
     }) |line| {
@@ -46,5 +44,5 @@ pub fn main() void {
             return;
         };
     }
-    std.debug.print("{d};{d}", .{score_one, score_two});
+    std.debug.print("{d};{d}", .{ score_one, score_two });
 }
