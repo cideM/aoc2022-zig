@@ -3,3 +3,4 @@ tags
 result
 zig-out
 zig-cache
+*.txt
