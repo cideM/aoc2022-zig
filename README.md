@@ -2,7 +2,7 @@
 
 Also see my [Lua solutions](https://github.com/cideM/aoc2022)!
 
-## Progress (05/25)
+## Progress (06/25)
 
 |     | Zig     |
 | --- | ------- |
@@ -11,7 +11,7 @@ Also see my [Lua solutions](https://github.com/cideM/aoc2022)!
 | 3   | :bell:  |
 | 4   | :bell:  |
 | 5   | :bell:  |
-| 6   | :zzz:  |
+| 6   | :bell:  |
 | 7   | :zzz:  |
 | 8   | :zzz:  |
 | 9   | :zzz:  |
@@ -43,9 +43,7 @@ $ cat code | sed 's/^/    /' | pbcopy`
 
 Turn it into a message:
 ```text
-# Zig
-
-[Both parts]()
+# [Zig]()
 
 [GitHub Repository](https://github.com/cideM/aoc2022-zig)
 ```
