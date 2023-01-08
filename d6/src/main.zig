@@ -12,7 +12,7 @@ const WINDOW_SIZE = 4;
 
 pub fn main() !void {
     const stdin = std.io.getStdIn();
-    // An array with as many slots as the alphabet has letters. The value are
+    // An array with as many slots as the alphabet has letters. The values are
     // the counts how often we've seen the given letter in the window.
     var seen = std.mem.zeroes([26]u8);
     var window = std.mem.zeroes([WINDOW_SIZE]u8);
